@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/* xác định các biến số trước khi làm main.css */
+:root {
+--main-font: "Noto Sans KR", sans-serif;
+--sub-font: "Noto Serif KR", serif;
+--main-color: #c27a34;
+--sub-color: #fffbeb;
+--base-color: #000;
+}
+
+
+
+/* set up cơ bản cho main */
+body {font-family: var(--main-font); font-size: 1.6rem; line-height: 1.5; color: #000; overflow-x: hidden;}
+
+.inner {max-width: 1600px; margin: 0 auto; padding: 0 20px;}
+
+
+
+
+/* HEADER */
+/* 1 */
+#header {position: absolute; left: 0; top: 0; width: 100%; z-index: 3; transition: all 0.5s; border-bottom: 1px solid rgba(255,255,255,0.5);}
+#header .inner {display: flex; justify-content: space-between; align-items: center; max-width: 1740px;}
+#header h1 img {display: block;}
+#header nav {margin: 0 auto 0 50px;} /* trong inner có 3 yếu tố, đẩy yếu tố ở giữa là nav sang bên trái */
+#header .gnb {display: flex;}
+#header .gnb > li {position: relative;}
+#header .gnb > li::before {content: ""; display: block; width: 0; height: 4px; background: var(--main-color); position: absolute; left: 50%; bottom: 0; opacity: 0; transition: all 0.5s;}
+#header .gnb > li:hover::before {opacity: 1; width: 100%; transform: translate(-50%);}
+#header .gnb > li > a {display: block; padding: 30px 40px; color: #fff; font-size: 2rem; font-family: var(--sub-font);}
+
+
+
+/* 2 */
+/* nút bên góc phải, phải chốt size cho mỗi yếu tố, sau đó nhét background vào */
+#header .util {display: flex; gap: 30px; align-items: center;}
+#header .util .ham {width: 35px; height: 20px; font-size: 0; cursor: pointer; background: url(../images/common/ham.png);}
+#header .util .store {display: inline-block; padding: 10px 30px; color: #fff; background: var(--main-color); border-radius: 50px;} /* vì a là yếu tố khác button nên ko cùng hàng, phải cho display flex vào util để cùng hàng */
+
+
+/* 3 - vùng nền khi hiện 2차 menu */
+#header .depth2_bg {position: absolute; left: 0; height: 70px; width: 100%; background: #fff; display: none;}
+
+/* 4 -  2차 menu*/
+#header .gnb > li .depth2 {position: absolute; z-index: 5; width: 500px; display: none;} /* nếu cho display flex vào đây để thành hàng ngang thì ko dùng display block để ẩn đi được nên phải cho như bên dưới - inline-block vào li */
+#header .gnb > li .depth2 li {display: inline-block;}
+#header .gnb > li .depth2 li a {display: block; padding: 20px 20px;} /* muốn đổi chữ màu trắng or tạo khoảng cách giữa các chữ thì nên cho vào a */
+
+/* 5 - thêm màu nền trắng khi rê chuột lên menu1 là gnb, chứ rê chuột lên util thì ko có nền trắng */
+#header.active {background: #fff;}
+#header.active h1 {filter: invert(80%);}
+#header.active .gnb > li > a {color: #333;} 
+#header.active .util .ham {filter: invert(80%);} /* khi rê chuột lên thì ham đổi từ màu trắng sang đen, còn nút a nền cam kế bên thì giữ nguyên */
+
+
+
+/* 6 - nhấn nút ham thì hiện ra màn hình đen mờ và các menu */
+.mgnb_wrap {position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: url(../images/common/mgnb_bg.png) no-repeat center center / cover; display: none;}
+.mgnb_wrap .mgnb {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #fff; width: 60%; border-bottom: 1px solid rgba(255,255,255,0.1);}
+.mgnb_wrap .mgnb > li {display: flex; border-top: 1px solid rgba(255,255,255,0.1); font-size: 3rem; align-items: center; padding: 40px;}
+.mgnb_wrap .mgnb > li > a {width: 300px; font-weight: 700; text-transform: uppercase;}
+.mgnb_wrap .mgnb > li .mdepth2 {display: flex; gap: 50px; font-size: 2rem; opacity: 0.5;}
+.mgnb_wrap .mgnb_close {width: 50px; height: 50px; font-size: 0; background: #000 url(../images/common/icon_close_w.svg) no-repeat center center / 50%; cursor: pointer; position: absolute; right: 0; top: 0;}
+
+@media (max-width: 1200px) {
+  #header {padding: 10px 0;}
+  #header h1 img {width: 80px;}
+  #header .gnb {display: none;}
+  #header .util .store {display: none;} /* khi giảm màn hình thì phần menu đầu trang mất đi, store mất đi, còn mỗi ham hiện ra */
+  .mgnb_wrap .mgnb {width: 80%;}
+  .mgnb_wrap .mgnb > li {font-size: 2.5rem; padding: 30px;}
+  .mgnb_wrap .mgnb > li .mdepth2 {font-size: 1.7rem;}
+}
+@media (max-width: 900px) {
+  .mgnb_wrap .mgnb > li {flex-wrap: wrap;}
+  .mgnb_wrap .mgnb > li > a {width: 100%;}
+  .mgnb_wrap .mgnb > li .mdepth2 {width: 100%; gap: 30px; padding-top: 10px;}
+}
+@media (max-width: 768px) {
+  #header h1 img {width: 70px;}
+  .mgnb_wrap .mgnb {width: 90%;}
+  .mgnb_wrap .mgnb > li {font-size: 1.7rem; padding: 20px;}
+  .mgnb_wrap .mgnb > li .mdepth2 {font-size: 1.4rem;}
+}
+
+
+
+
+
+
+
+/* FOOTER */
+#footer {padding: 100px 0; }
+#footer .inner {display: flex; position: relative;}
+#footer .footer_logo {display: flex; gap: 20px; align-items: flex-end;}
+#footer .cs {text-align: right; position: absolute; top: 0; right: 20px;}
+#footer .cs .tel {font-weight: 700;}
+#footer .cs .tel span {display: block; font-size: 3.5rem; color: var(--main-color); padding: 20px 0 30px; font-family: var(--sub-font);}
+#footer .cs .time {color: #9fa19f;}
+#footer .footer_txt {color: #9fa19f; padding-top: 30px;}
+#footer .footer_txt span {color: black;}
+#footer .copy {padding-top: 30px; color: #9fa19f;}
+
+@media (max-width: 1000px) {
+  #footer {padding: 50px 0;}
+  #footer .cs {position: static; text-align: left; padding-top: 30px;}
+  #footer .footer_txt {padding-top: 20px;}
+  #footer .footer_txt span {font-weight: 400;}
+}
+
+@media (max-width: 768px) {
+  #footer {font-size: 1.4rem;}
+}

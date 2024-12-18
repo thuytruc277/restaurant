@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/* 1 - phần chữ h2 + p */
+h2 {font-size: 2rem; font-family: var(--sub-font); border-top: 1px solid var(--main-color); color: var(--main-color); border-radius: 50%; width: 180px; padding-top: 10px; display: inline-block; text-align: center;}
+h2 + p {font-size: 4rem; font-family: var(--sub-font); padding: 30px 0 60px;}
+
+.btn_more a {display: inline-block; padding: 0 25px; background: url(../images/main/more.png) no-repeat right center; transition: all 0.5s; font-size: 1.8rem;}
+
+@media (max-width: 1200px) {
+  h2 {font-size: 1.8rem; width: 160px; padding-top: 10px;}
+  h2 + p {font-size: 3.5rem; padding: 25px 50px;}
+}
+@media (max-width: 768px) {
+  h2 {font-size: 1.7rem; width: 130px;}
+  h2 + p {font-size: 2.5rem;}
+  .btn_more a {padding: 0 20px; font-size: 1.5rem;}
+}
+
+
+
+
+/* BANNER */
+/* 2 - chốt chiều cao banner trước, trong background, nếu có riêng bg dành cho mobile thì ko cần thêm /cover còn ko có thì phải thêm */
+.banner .swiper-slide {height: 900px; display: flex; align-items: center; color: #fff; padding: 0 10.4166vw; /* 200vw/1920 x 100 */}
+.banner .banner1 {background: url(../images/main/visual_01.jpg) no-repeat center center / cover;}
+.banner .banner2 {background: url(../images/main/visual_02.jpg) no-repeat center center / cover;}
+/* 3 - phần txt */
+.banner .banner_txt h3 {font-size: 8rem; padding-bottom: 40px; font-family: var(--sub-font); font-weight: 400;}
+.banner .banner_txt p {font-size: 2.5rem;}
+@media (max-width: 1200px) {
+  .banner .swiper-slide {height: 750px;}
+  .banner .banner_txt h3 {font-size: 7.5rem; padding-bottom: 30px; }
+  .banner .banner_txt p {font-size: 2.2rem;}
+}
+@media (max-width: 768px) {
+  .banner .swiper-slide {height: 600px;}
+  .banner .banner_txt h3 {font-size: 6rem; padding-bottom: 20px; }
+  .banner .banner_txt p {font-size: 2rem;}
+}
+
+/* 4 - control  */
+.banner .control {position: absolute; left: 10.4166vw; bottom: 90px; z-index: 15; display: flex; gap: 20px;}
+.banner .swiper-button-prev {position: static; width: 34px; height: 13px; background: url(../images/main/prev_w.png); margin: 0; /* vì mặc định là có margin nên phải cho 0 để xóa đi */}
+.banner .swiper-button-next {position: static; width: 34px; height: 13px; background: url(../images/main/next_w.png); margin: 0;}
+.banner .pause {width: 20px; height: 20px; background: url(../images/main/btn_puase.png); font-size: 0; cursor: pointer;}
+.banner .play {width: 20px; height: 20px; background: url(../images/main/btn_play.png); font-size: 0; cursor: pointer; display: none;}
+/* làm mất dấu next - prev màu xanh dương có sẵn */
+.banner .swiper-button-prev::after {display: none;}
+.banner .swiper-button-next::after {display: none;}
+
+/* BEST MENU - 5 */
+.best {padding: 150px 0; text-align: center; background: url(../images/main/best_bg.png) no-repeat center center / cover;}
+.best .best_list {padding-bottom: 50px;}
+.best .swiper-slide {transform: scale(0.8); transition: transform 0.5s;}
+.best .swiper-slide-active {transform: scale(1);}
+.best .swiper-slide {width: 100%;}
+.best .thumb {position: relative; width: 100%; }
+.best .thumb img {width: 100%; display: block;}
+.best .thumb a:nth-child(1) img {opacity: 1; transition: all 0.5s;}
+.best .thumb a:nth-child(2) img {position: absolute; top: 0;  left: 50%; transform: translateX(-50%); z-index: 2; opacity: 0; transition: all 0.5s;}
+.best .thumb:hover a:nth-child(1) img {opacity: 0;}
+.best .thumb:hover a:nth-child(2) img {opacity: 1;}
+
+.best .name {font-size: 2.5rem; padding: 30px 0 20px; font-weight: 500;}
+@media (max-width: 1200px) {
+  .best .name {font-size: 2.2rem; padding: 20px 0 10px;}
+  .best {padding: 100px 0;}
+}
+
+@media (max-width: 768px) {
+  .best .name {font-size: 1.8rem; padding: 10px 0 5px;}
+  .best {padding: 50px 0;}
+}
+
+.best .swiper-pagination {height: 2px; top: auto; bottom: 0; width: 80%; left: 50%; transform: translateX(-50%);}
+.best .swiper-pagination-progressbar-fill {background: var(--main-color);}
+
+
+
+/* BRAND - 6*/
+.brand {background: url(../images/main/brand_bg.jpg) no-repeat center center / cover; padding: 150px 0; display: flex; justify-content: center; align-items: center; text-align: left; flex-wrap: wrap;}
+.brand .brand_txt p {color: #fff;}
+.brand .brand_more {display: flex; flex-direction: row-reverse; gap: 150px; flex-wrap: wrap;}
+.brand .brand_txt .brand_more a {padding-left: 0;}
+.brand .btn_more a {filter: invert(100%);}
+@media (max-width: 1200px) {
+  .brand {text-align: center;}
+  .brand .brand_more {text-align: center; flex-direction: column; gap: 30px; }
+}
+
+/* NEW MENU */
+.new {padding: 150px 0; background: #fffbeb;}
+.new .new_txt {text-align: center;}
+.new .new_name {width: 30%;}
+.new .new_menu {display: flex; gap: 30px; flex-wrap: wrap; flex-direction: row;}
+.new .new_name button {background: #f4e7d0; padding: 15px 25px; font-size: 2rem; border-radius: 30px; margin-bottom: 10px; cursor: pointer;}
+.new .new_img {width: calc(70% - 30px);}
+.new .new_img li img {width: 100%; display: block; border-radius: 30px;}
+.new .new_name button.active {color: #fff; background: var(--main-color);}
+.new .new_img li:not(:first-child) {display: none;}
+
+@media (max-width: 1200px) {
+  .new .new_name button {padding: 13px 22px; font-size: 1.8rem;}
+  .new {padding: 100px 0;}
+}
+@media (max-width: 1100px) {
+  .new .new_menu {display: flex; flex-direction: column;}
+  .new .new_name {width: 100%;}
+  .new .new_img {width: 100%;}
+}
+@media (max-width: 768px) {
+  .new .new_name button {padding: 8px 18px; font-size: 1.6rem;}
+  .new .new_menu {gap: 20px;}
+  .new {padding: 50px 0;}
+}
+
+/* FOOTER */
+#footer {padding: 100px 0; }
+#footer .inner {display: flex; position: relative;}
+#footer .footer_logo {display: flex; gap: 20px; align-items: flex-end;}
+#footer .cs {text-align: right; position: absolute; top: 0; right: 20px;}
+#footer .cs .tel {font-weight: 700;}
+#footer .cs .tel span {display: block; font-size: 3.5rem; color: var(--main-color); padding: 20px 0 30px; font-family: var(--sub-font);}
+#footer .cs .time {color: #9fa19f;}
+#footer .footer_txt {color: #9fa19f; padding-top: 30px;}
+#footer .footer_txt span {color: black;}
+#footer .copy {padding-top: 30px; color: #9fa19f;}
+
+@media (max-width: 1000px) {
+  #footer {padding: 50px 0;}
+  #footer .cs {position: static; text-align: left; padding-top: 30px;}
+  #footer .footer_txt {padding-top: 20px;}
+  #footer .footer_txt span {font-weight: 400;}
+}
+
+@media (max-width: 768px) {
+  #footer {font-size: 1.4rem;}
+}

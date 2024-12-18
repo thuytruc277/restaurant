@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일상적미식</title>
+
+  <!-- meta - 검색할 때 필요한 택 -->
+  <meta name="keywords" content="일상적미식">
+  <meta name="description" content="한끼에 담은 오늘의 가치, 프리미엄 셰프메이드 가정식 일상적미식">
+
+  <!-- opengraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="일상적미식">
+  <meta property="og:url" content="https://www.ilmi.kr">
+  <meta property="og:image" content="images/common/og_img.jpg">
+  <meta property="og:description" content="한끼에 담은 오늘의 가치, 프리미엄 셰프메이드 가정식 일상적미식">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon">
+
+
+  <!-- font -->
+  <link rel="stylesheet" href="css/font.css">
+
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- common : header, footer -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- main : section -->
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- common : header -->
+  <script defer src="js/common.js"></script>
+  <!-- slide -->
+  <script defer src="js/main.js"></script>
+
+
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header">
+      <div class="inner">
+        <h1><a href="index.html"><img src="images/common/logo_w.png" alt="일상적미식"></a></h1>
+
+        <nav> <!-- hàng menu bên trái màn hình -->
+          <ul class="gnb">
+            <li><a href="sub/brand.html">Brand</a>
+              <ul class="depth2">
+                <li><a href="sub/brand.html">브랜드 스토리</a></li>
+              </ul><!--depth2 -->
+            </li>
+            <li><a href="sub/prd.html">Product</a>
+              <ul class="depth2">
+                <li><a href="sub/prd.html">베스트</a></li>
+                <li><a href="sub/prd.html">신제품</a></li>
+                <li><a href="sub/prd.html">추천제품</a></li>
+              </ul><!--depth2 -->
+            </li>
+            <li><a href="sub/news.html">News</a>
+              <ul class="depth2">
+                <li><a href="sub/news.html">공지사항</a></li>
+                <li><a href="sub/news.html">보도자료</a></li>
+              </ul><!--depth2 -->
+            </li>
+            <li><a href="sub/sns.html">SNS</a>
+              <ul class="depth2">
+                <li><a href="sub/sns.html">인스타그램</a></li>
+                <li><a href="sub/sns.html">유튜브</a></li>
+              </ul><!--depth2 -->
+            </li>
+            <li><a href="sub/event.html">Event</a>
+              <ul class="depth2">
+                <li><a href="sub/event.html">이벤트</a></li>
+                <li><a href="sub/event.html">당첨자발표</a></li>
+              </ul><!--depth2 -->
+            </li>
+          </ul><!-- gnb -->
+
+
+          <div class="mgnb_wrap"> <!-- nút ham khi nhấn thì hiện ra vùng này -->
+            <ul class="mgnb">
+              <li><a href="sub/brand.html">Brand</a>
+                <ul class="mdepth2">
+                  <li><a href="sub/brand.html">브랜드 스토리</a></li>
+                </ul><!--depth2 -->
+              </li>
+              <li><a href="sub/prd.html">Product</a>
+                <ul class="mdepth2">
+                  <li><a href="sub/prd.html">베스트</a></li>
+                  <li><a href="sub/prd.html">신제품</a></li>
+                  <li><a href="sub/prd.html">추천제품</a></li>
+                </ul><!--depth2 -->
+              </li>
+              <li><a href="sub/news.html">News</a>
+                <ul class="mdepth2">
+                  <li><a href="sub/news.html">공지사항</a></li>
+                  <li><a href="sub/news.html">보도자료</a></li>
+                </ul><!--depth2 -->
+              </li>
+              <li><a href="sub/sns.html">SNS</a>
+                <ul class="mdepth2">
+                  <li><a href="sub/sns.html">인스타그램</a></li>
+                  <li><a href="sub/sns.html">유튜브</a></li>
+                </ul><!--mdepth2 -->
+              </li>
+              <li><a href="sub/event.html">Event</a>
+                <ul class="mdepth2">
+                  <li><a href="sub/event.html">이벤트</a></li>
+                  <li><a href="sub/event.html">당첨자발표</a></li>
+                </ul><!--mdepth2 -->
+              </li>
+            </ul><!-- mgnb -->
+            <div class="mgnb_close">메뉴닫기</div> <!-- nút bấm tắt hiện ra sau khi nhấn ham -->
+          </div><!-- bgnb_wrap -->
+
+        </nav>
+
+        <div class="util">
+          <!-- hàng button bên phải màn hình. nút ham và store là nút a -->
+          <button class="ham">메뉴보기</button>
+          <a href="sub/store.html" class="store">공식 스토어</a>
+        </div> <!-- util -->
+      </div><!-- inner -->
+
+      <div class="depth2_bg"> </div><!-- depth2_bg -->
+      <!-- rê chuột lên các mục của menu thì 2차 menu hiện lên trên màu nền cam -->
+
+
+    </header>
+
+    <main id="main">
+      <section class="banner">
+        <div class="swiper banner_list">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide banner1">
+              <div class="banner_txt">
+                <h3>일상적미식</h3>
+                <p>한끼에 담은 오늘의 가치,<br>
+                  레스토랑 오늘이 만든 간편식</p>
+              </div><!-- banner_txt -->
+            </li><!-- swiper-slide -->
+            <li class="swiper-slide banner2">
+              <div class="banner_txt">
+                <h3>Restaurant o'neul</h3>
+                <p>가장 풍요롭고 생생한 시간,<br>
+                  오늘을 주제로 한 파인다이닝</p>
+              </div><!-- banner_txt -->
+            </li><!-- swiper-slide -->
+          </ul><!-- swiper-wrapper -->
+
+          <div class="control"> <!-- phần nút chính giữa banner đầu page -->
+            <div class="swiper-button-prev"></div>
+            <button class="pause">슬라이드 배너 정지</button>
+            <button class="play">슬라이드 배너 재생</button>
+            <div class="swiper-button-next"></div>
+          </div><!-- control buttons -->
+        </div><!-- swiper-->
+      </section><!-- banner -->
+
+
+      <section class="best">
+        <h2 data-aos="fade-up">Best Menu</h2>
+        <p data-aos="fade-up">베스트 메뉴를 만나보세요.</p>
+        <div class="swiper best_list" data-aos="fade-up">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="thumb">
+                <a href="#"><img src="images/main/best_01.png" alt="상품사진1"></a>
+                <a href="#"><img src="images/main/best_01_on.png" alt="상품사진1on"></a>
+              </div>
+              <p class="name">일미고기만두</p>
+              <div class="btn_more"><a href="#">자세히보기</a></div>
+            </li>
+
+            <li class="swiper-slide">
+              <div class="thumb">
+                <a href="#"><img src="images/main/best_02.png" alt="상품사진2"></a>
+                <a href="#"><img src="images/main/best_02_on.png" alt="상품사진2on"></a>
+              </div>
+              <p class="name">일미평양냉면</p>
+              <div class="btn_more"><a href="#">자세히보기</a></div>
+            </li>
+
+            <li class="swiper-slide">
+              <div class="thumb">
+                <a href="#"><img src="images/main/best_03.png" alt="상품사진3"></a>
+                <a href="#"><img src="images/main/best_03_on.png" alt="상품사진3on"></a>
+              </div>
+              <p class="name">한우1등급떡갈비</p>
+              <div class="btn_more"><a href="#">자세히보기</a></div>
+            </li>
+
+            <li class="swiper-slide">
+              <div class="thumb">
+                <a href="#"><img src="images/main/best_04.png" alt="상품사진4"></a>
+                <a href="#"><img src="images/main/best_04_on.png" alt="상품사진4on"></a>
+              </div>
+              <p class="name">일미한우사골곰국</p>
+              <div class="btn_more"><a href="#">자세히보기</a></div>
+            </li>
+
+            <li class="swiper-slide">
+              <div class="thumb">
+                <a href="#"><img src="images/main/best_05.png" alt="상품사진5"></a>
+                <a href="#"><img src="images/main/best_05_on.png" alt="상품사진5on"></a>
+              </div>
+              <p class="name">일미통등심돈까스</p>
+              <div class="btn_more"><a href="#">자세히보기</a></div>
+            </li>
+
+            <li class="swiper-slide">
+              <div class="thumb">
+                <a href="#"><img src="images/main/best_01.png" alt="상품사진1"></a>
+                <a href="#"><img src="images/main/best_01_on.png" alt="상품사진1on"></a>
+              </div>
+              <p class="name">일미고기만두</p>
+              <div class="btn_more"><a href="#">자세히보기</a></div>
+            </li>
+
+            <li class="swiper-slide">
+              <div class="thumb">
+                <a href="#"><img src="images/main/best_02.png" alt="상품사진2"></a>
+                <a href="#"><img src="images/main/best_02_on.png" alt="상품사진2on"></a>
+              </div>
+              <p class="name">일미평양냉면</p>
+              <div class="btn_more"><a href="#">자세히보기</a></div>
+            </li>
+
+            <li class="swiper-slide">
+              <div class="thumb">
+                <a href="#"><img src="images/main/best_03.png" alt="상품사진3"></a>
+                <a href="#"><img src="images/main/best_03_on.png" alt="상품사진3on"></a>
+              </div>
+              <p class="name">한우1등급떡갈비</p>
+              <div class="btn_more"><a href="#">자세히보기</a></div>
+            </li>
+
+            <li class="swiper-slide">
+              <div class="thumb">
+                <a href="#"><img src="images/main/best_04.png" alt="상품사진4"></a>
+                <a href="#"><img src="images/main/best_04_on.png" alt="상품사진4on"></a>
+              </div>
+              <p class="name">일미한우사골곰국</p>
+              <div class="btn_more"><a href="#">자세히보기</a></div>
+            </li>
+
+            <li class="swiper-slide">
+              <div class="thumb">
+                <a href="#"><img src="images/main/best_05.png" alt="상품사진5"></a>
+                <a href="#"><img src="images/main/best_05_on.png" alt="상품사진5on"></a>
+              </div>
+              <p class="name">일미통등심돈까스</p>
+              <div class="btn_more"><a href="#">자세히보기</a></div>
+            </li>
+
+          </ul><!-- swiper-wrapper -->
+
+          <div class="swiper-pagination"></div>
+        </div><!-- swiper best_list -->
+      </section><!-- best -->
+
+
+      <section class="brand" data-aos="fade-up">
+        <div class="brand_txt">
+          <div class="brand_tit">
+            <h2>Brand Story</h2>
+            <p>오늘, 뭐 먹지?</p>
+          </div>
+          <div class="brand_more">
+            <p>일상을 채우는 행복한 고민,<br>
+              오늘의 식사는 생애 단 한번뿐이기에<br>
+              매일 가치 있는 한 끼를 즐길 수 있도록<br>
+              일상적미식을 제안합니다. </p>
+            <div class="btn_more"><a href="#">자세히보기</a></div>
+          </div>
+        </div><!-- brand_txt -->
+      </section><!-- brand -->
+
+
+      <section class="new">
+        <div class="inner">
+          <div class="new_txt" data-aos="fade-left">
+            <h2>New Menu</h2>
+            <p>새로운 메뉴를 만나보세요.</p>
+          </div>
+          <div class="new_menu" data-aos="fade-right">
+            <div class="new_name">
+              <button class="active">#일미소불고기</button>
+              <button>#일미 매콤 국물떡볶이</button>
+              <button>#마늘간장 닭강정</button>
+              <button>#일미간장제육</button>
+              <button>#만능육수한알</button>
+              <button>#일미감자탕</button>
+              <button>#일미 통모짜 치즈돈까스</button>
+            </div><!-- new_name -->
+            <ul class="new_img">
+              <li><a href="#"><img src="images/main/new_01.png" alt="photo1"></a></li>
+              <li><a href="#"><img src="images/main/new_02.png" alt="photo2"></a></li>
+              <li><a href="#"><img src="images/main/new_03.png" alt="photo3"></a></li>
+              <li><a href="#"><img src="images/main/new_04.png" alt="photo4"></a></li>
+              <li><a href="#"><img src="images/main/new_05.png" alt="photo5"></a></li>
+              <li><a href="#"><img src="images/main/new_06.png" alt="photo6"></a></li>
+              <li><a href="#"><img src="images/main/new_07.png" alt="photo7"></a></li>
+            </ul><!-- new_img -->
+          </div><!-- new_menu -->
+        </div><!-- inner -->
+      </section><!-- story -->
+
+    </main><!-- main -->
+
+
+
+    <footer id="footer">
+      <div class="inner">
+        <div>
+          <div class="footer_logo">
+            <div><img src="images/common/logo_b.png" alt="일상적미식"></div>
+            <div><img src="images/common/logo_oneul.png" alt="레스토랑 오늘"></div>
+          </div>
+          <div class="cs">
+            <p class="tel">일상적미식 고객센터<span>1670-6045</span></p>
+            <p class="time">평일(월~금) AM 09:30 ~ PM 05:30<br>
+              점심시간 AM 11:30 ~ PM 12:30<br>
+              토, 일, 법정공휴일 휴무</p>
+          </div><!-- cs -->
+          <p class="footer_txt">
+            <span>재단법인 행복에프엔씨</span>
+            사업자등록번호 <span>106-82-15618</span> 대표자 <span>안범환</span><br>
+            주소 <span>서울특별시 용산구 장문로 60</span>
+          </p>
+          <p class="copy">Copyright &copy; 일상적미식. All Rights Reserved.</p>
+        </div>
+      </div><!-- inner -->
+    </footer>
+  </div><!-- wrap -->
+
+
+
+  <!-- jquery swiper main -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/main.js">  </script>
+</body>
+
+</html>
